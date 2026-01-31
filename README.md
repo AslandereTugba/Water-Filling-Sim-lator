@@ -1,58 +1,27 @@
 # Water Filling Simulator (ASCII) — Python
 
-A small Python console project that visualizes filling a glass step-by-step using ASCII characters.  
-After each pour, the program prints the current water level inside the glass; if the glass overflows, the overflow is shown extending to the right.
+A Python console program that simulates filling a glass step-by-step and visualizes the result using ASCII characters. After each pour, the program prints the current fill level inside the glass; if the total amount exceeds capacity, overflow is displayed to the right.
 
-## What it does
-- Takes **glass width**, **glass height**, and **how many pours** will be made.
-- After each pour, prints an ASCII glass:
-  - `|` and `-` form the glass borders
-  - `*` shows filled water inside the glass
-  - Overflow is displayed to the **right side** when total water exceeds capacity
+## Features
+- User-defined glass dimensions (width/height)
+- Multiple pour steps (incremental filling)
+- ASCII visualization of:
+  - glass borders
+  - water level
+  - overflow when capacity is exceeded
 
-## Input format
-The program reads inputs from standard input in this order:
+## How It Works
+1. The program reads `glass_width`, `glass_height`, and `fill_count`.
+2. It then reads `fill_count` pour amounts.
+3. After each pour, it prints the updated glass with the new water level and possible overflow.
 
-1. `glass_width` (integer)
-2. `glass_height` (integer)
-3. `fill_count` (integer)
-4. `fill_count` lines of poured water amounts (integers)
+## Input Format
+Enter values in this order:
+1. `glass_width` (int)
+2. `glass_height` (int)
+3. `fill_count` (int)
+4. `fill_count` lines of pour amounts (int)
 
-## How to run
+## Run
 ```bash
 python WaterFillingSimulatorProject.py
-Then enter the values line by line (or redirect from a file).
-
-Example
-Input
-
-4
-3
-3
-5
-4
-10
-Output (excerpt)
-
-|    |
-|*   |
-|****|
-------
-######
-
-|*   |
-|****|
-|****|
-------
-######
-...
-Tech
-Python 3
-
-Notes
-This is a console/ASCII visualization project (no GUI).
-
-Designed as a practice exercise for loops, integer arithmetic, and output formatting.
-
-
-İstersen README’ye en üste bir de **“Live demo”** gibi küçük bir GIF/ekran görüntüsü eklemek için (ör. terminal çıktısı) mini bir “Screenshots” bölümü de yazabilirim.
